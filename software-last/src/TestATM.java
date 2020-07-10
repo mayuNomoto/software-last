@@ -1,3 +1,5 @@
+
+
 public class TestATM {
 
 	//メンバ変数
@@ -46,4 +48,11 @@ public class TestATM {
 		
 		System.out.println("Current balance: "+ current + " JPY");		
 	}	
+	
+	//1年後の預金予想
+	public void afterdep() {
+		int current=m_myAcc.getBalance();
+		double cash=current*1.1;
+		System.out.println("1年後の預金予想："+cash+" JPY");
+	}
 }
