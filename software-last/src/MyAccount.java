@@ -5,10 +5,12 @@ public class MyAccount {
 	private int m_accNum;
 	private int m_password;
 	private int m_balance;
+	private int m_db;
 
 	//Constructor
-	public MyAccount()
-	{}
+	public MyAccount(){
+		
+	}
 
 	//getter
 
@@ -29,6 +31,13 @@ public class MyAccount {
 	{
 		return m_balance;
 	}
+	
+	//借金額を取得
+	public int getDebt()
+	{
+		return m_db;
+	}
+	
 
 	//setter
 
@@ -48,5 +57,12 @@ public class MyAccount {
 	public void setBalance(int balance)
 	{
 		this.m_balance = balance;
+		
+	}
+	 
+	//借金額を設定
+	public void debt(int db)
+	{
+		this.m_db = db;
 	}
 }

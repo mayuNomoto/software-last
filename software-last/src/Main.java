@@ -1,6 +1,7 @@
 
 import java.util.*;
 
+
 public class Main {
 
 	public static void main (String [] args) 
@@ -56,11 +57,12 @@ public class Main {
 		//[2]-1		
 		for (;;) {
 			System.out.println("機能を選択してください");
-			System.out.println("1: 入金");
+			System.out.println("1:　入金");
 			System.out.println("2: 出金");
 			System.out.println("3: 残高照会");
 			System.out.println("4: 振り込み");
-			System.out.println("5: 終了");
+			System.out.println("5:　キャッシング");
+			System.out.println("6: 終了");
 			
 			int option = sc.nextInt();
 			if (option == 1) {
@@ -110,6 +112,14 @@ public class Main {
 				atm.showCurrentBalance(); //表示
 		}
 			else if (option == 5) {
+				System.out.println("借りたい金額を入力してください");
+				int dbmoney = sc.nextInt(); //借金額
+				myAcc.debt(myAcc.getDebt()+dbmoney);
+				System.out.println("現在の借金額は"+ myAcc.getDebt());
+				
+				
+			}
+			else if (option == 6) {
 			System.exit(0);
 		}
 		else {
